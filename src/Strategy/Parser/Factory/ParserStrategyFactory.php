@@ -6,7 +6,6 @@ use App\Contract\ParserStrategy;
 use App\Strategy\Parser\{
     JsonParser,
     CsvParser,
-    TxtParser,
     XlsxParser,
 };
 
@@ -15,7 +14,6 @@ class ParserStrategyFactory {
         return match ($extension) {
             'json' => new JsonParser(),
             'csv'  => new CsvParser(),
-            'txt'  => new TxtParser(),
             'xlsx' => new XlsxParser(),
             default => throw new \InvalidArgumentException("Not suported extension: $extension"),
         };

@@ -16,7 +16,7 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 #[AsCommand(
   name: 'export',
-  description: 'Export data to csv',
+  description: 'Export file data to selected extension',
   hidden: false,
   aliases: ['export']
 )]

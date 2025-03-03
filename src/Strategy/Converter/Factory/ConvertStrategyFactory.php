@@ -6,7 +6,6 @@ use App\Contract\ConvertStrategy;
 use App\Strategy\Converter\{
     JsonConverter,
     CsvConverter,
-    TxtConverter,
     XlsxConverter,
 };
 
@@ -15,7 +14,6 @@ class ConvertStrategyFactory {
         return match ($extension) {
             'json' => new JsonConverter(),
             'csv'  => new CsvConverter(),
-            'txt'  => new TxtConverter(),
             'xlsx' => new XlsxConverter(),
             default => throw new \InvalidArgumentException("Not suported extension: $extension"),
         };
